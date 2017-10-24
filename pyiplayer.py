@@ -30,4 +30,4 @@ class iplayer(object):
 
 status = iplayer()
 
-status.list('Strictly')
+status.search('Strictly')
