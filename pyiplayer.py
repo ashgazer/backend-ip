@@ -3,7 +3,7 @@ import sys
 
 
 class iplayer(object):
-    def search(self, query):
+    def search(self):
         p = subprocess.Popen(["get_iplayer",  str(sys.argv[0])],
                              stdout=subprocess.PIPE)
         output, err = p.communicate()
