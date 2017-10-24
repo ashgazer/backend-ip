@@ -25,7 +25,7 @@ class iplayer(object):
             print output
 
         print ("done")
-        print (output)
+        print type((output))
 
 
 status = iplayer()
