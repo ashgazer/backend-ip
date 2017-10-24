@@ -1,12 +1,12 @@
 import subprocess
 import sys
 
-print str(sys.argv[0])
+print str(sys.argv[1])
 
 
 class iplayer(object):
     def search(self):
-        p = subprocess.Popen(["get_iplayer",  str(sys.argv[0])],
+        p = subprocess.Popen(["get_iplayer",  str(sys.argv[1])],
                              stdout=subprocess.PIPE)
         output, err = p.communicate()
 
