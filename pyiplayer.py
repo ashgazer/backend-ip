@@ -13,7 +13,7 @@ class iplayer(object):
             print output
 
         print ("done")
-        print dir((output))
+        print type((output))
 
     def list(self):
         p = subprocess.Popen(["transmission-remote", "-n", "transmission:transmission", "-l"], stdout=subprocess.PIPE)
