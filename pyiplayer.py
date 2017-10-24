@@ -1,9 +1,10 @@
 import subprocess
+import sys
 
 
 class iplayer(object):
     def search(self, query):
-        p = subprocess.Popen(["get_iplayer", query],
+        p = subprocess.Popen(["get_iplayer",  str(sys.argv[0])],
                              stdout=subprocess.PIPE)
         output, err = p.communicate()
 
@@ -30,4 +31,4 @@ class iplayer(object):
 
 status = iplayer()
 
-status.search('Strictly')
+status.search()
