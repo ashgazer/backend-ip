@@ -1,6 +1,8 @@
 import subprocess
 import sys
 
+print str(sys.argv[0])
+
 
 class iplayer(object):
     def search(self):
