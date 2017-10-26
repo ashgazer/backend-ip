@@ -38,3 +38,5 @@ url= 'https://unblocktpb.pro/search/{0}/0/7/0'
 man = get_s(url)
 
 site_data = man.search(str(sys.argv[1]))
+
+print(site_data)
