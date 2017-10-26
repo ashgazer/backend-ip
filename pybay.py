@@ -4,14 +4,17 @@ import urllib2
 
 import sys
 
-print str(sys.argv[1])
+#print str(sys.argv[1])
 
 
 
 class get_s(object):
 
+
+    def __init__(self,url):
+        self.url = url
+
     def search(self,query):
-        url = "http://www.google.com"
         query_s = urllib.quote(query)
         request_headers = {
             "Accept-Language": "en-US,en;q=0.5",
@@ -21,10 +24,13 @@ class get_s(object):
             "Connection": "keep-alive"
         }
 
-        request = urllib2.Request(url, headers=request_headers)
+        request = urllib2.Request(self.url, headers=request_headers)
         contents = urllib2.urlopen(request).read()
         return contents
 
 
+url= 'https://unblocktpb.pro/search/{0}/0/7/0'
 
+man = get_s(url)
 
+print(man.search('game of thrones'))
