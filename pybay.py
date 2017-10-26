@@ -5,7 +5,7 @@ import urllib2
 import sys
 
 #print str(sys.argv[1])
-
+#https://thepiratebayproxylist.net/
 
 
 class get_s(object):
@@ -26,11 +26,15 @@ class get_s(object):
 
         request = urllib2.Request(self.url, headers=request_headers)
         contents = urllib2.urlopen(request).read()
-        return contents
+        return self.__clean_data(contents)
+
+    def __clean_data(self,data):
+        start = data.find("<table")
+        return data[start:]
 
 
 url= 'https://unblocktpb.pro/search/{0}/0/7/0'
 
 man = get_s(url)
 
-print(man.search('game of thrones'))
+site_data = man.search(str(sys.argv[1]))
