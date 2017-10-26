@@ -30,7 +30,8 @@ class get_s(object):
 
     def __clean_data(self,data):
         start = data.find("<table")
-        return data[start:]
+        finished = data.find("</table",start)
+        return data[start:finished+8]
 
 
 url= 'https://unblocktpb.pro/search/{0}/0/7/0'
