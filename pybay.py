@@ -11,7 +11,7 @@ import sys
 class get_s(object):
 
 
-    def __init__(self,url):
+    def __init__(self,url= 'https://unblocktpb.pro/search/{0}/0/7/0'):
         self.url = url
 
     def search(self,query):
@@ -24,7 +24,7 @@ class get_s(object):
             "Connection": "keep-alive"
         }
 
-        request = urllib2.Request(self.url, headers=request_headers)
+        request = urllib2.Request(self.url.format(query_s), headers=request_headers)
         contents = urllib2.urlopen(request).read()
         return self.__clean_data(contents)
 
