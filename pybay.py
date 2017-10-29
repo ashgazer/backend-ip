@@ -34,10 +34,10 @@ class get_s(object):
         return data[start:finished+8]
 
 
-url= 'https://unblocktpb.pro/search/{0}/0/7/0'
+#url= 'https://unblocktpb.pro/search/{0}/0/7/0'
 
-man = get_s(url)
+#man = get_s(url)
 
-site_data = man.search(str(sys.argv[1]))
+#site_data = man.search(str(sys.argv[1]))
 
-print(site_data)
+#print(site_data)
