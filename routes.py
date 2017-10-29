@@ -25,6 +25,7 @@ def find():
 	man = get_s()
 
 	site_data = man.search(qs)
+	site_data = site_data.replace('<a href=','<button type="submit" name="your_name" value=')
 
 
 	return(site_data)
