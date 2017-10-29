@@ -28,8 +28,14 @@ def find():
 	site_data = site_data.replace('<a href=','<button type="submit" name="your_name" value=')
 
 
+	site_data=  '<form action="/active" method="post">' + site_data + ' <input type="submit" value="Submit"> </form>'
+
+
 	return(site_data)
 
+@app.route("/active")
+def active():
+	return ("maybe")
 
 if __name__ == "__main__":
 	app.run(debug=True, host='0.0.0.0')
