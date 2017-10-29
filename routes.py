@@ -22,7 +22,7 @@ def search():
 @app.route("/find",methods=['POST','GET'])
 def find():
 	qs =  request.form["SQUERY"]
-	man = get_s(url)
+	man = get_s()
 
 	site_data = man.search(qs)
 
