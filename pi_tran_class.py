@@ -15,7 +15,7 @@ class transmission(object):
 
 
 		print ("done")
-		print (output)
+		return (output)
 
 	def list(self):
 		p = subprocess.Popen(["transmission-remote","-n", "transmission:transmission" ,"-l"], stdout=subprocess.PIPE)
@@ -33,7 +33,7 @@ class transmission(object):
 
 
 
-status = transmission()
+#status = transmission()
 
-status.list()
+#status.list()
 

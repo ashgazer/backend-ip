@@ -35,7 +35,12 @@ def find():
 
 @app.route("/active", methods=['POST'])
 def active():
-	return ("maybe")
+	tt =  request.form["your_name"]
+
+	status = transmission()
+	q = status.add_torrent(tt)
+
+	return (q)
 
 if __name__ == "__main__":
 	app.run(debug=True, host='0.0.0.0')
