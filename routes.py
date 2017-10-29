@@ -33,7 +33,7 @@ def find():
 
 	return(site_data)
 
-@app.route("/active")
+@app.route("/active", methods=['POST'])
 def active():
 	return ("maybe")
 
